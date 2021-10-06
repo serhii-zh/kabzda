@@ -16,8 +16,8 @@ const Dialogs = (props) => {
   const addMessage = () => {
     const textValue = textField.current.value;
     props.addMessageEntry(textValue);
-    textField.current.value = '';
-  }
+    textField.current.value = "";
+  };
 
   return (
     <div className={s.dialogs}>
