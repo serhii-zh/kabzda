@@ -1,4 +1,5 @@
 import React from "react";
+import { addPostEntry } from "../../../redux/state";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
@@ -7,13 +8,13 @@ const MyPosts = (props) => {
     <Post message={p.text} likesCount={p.likesCount} />
   ));
 
-    const textField = React.createRef();
+  const textField = React.createRef();
 
-    const addPost = () => {
-      const textValue = textField.current.value;
-      alert(textValue);
-      textField.current.value = '';
-    };
+  const addPost = () => {
+    const textValue = textField.current.value;
+    props.addPostEntry(textValue);
+    textField.current.value = "";
+  };
 
   return (
     <div className={s.myPosts}>
@@ -23,7 +24,7 @@ const MyPosts = (props) => {
           <textarea ref={textField}></textarea>
         </div>
         <div>
-          <button onClick={ addPost }>Add Post</button>
+          <button onClick={addPost}>Add Post</button>
         </div>
       </div>
       {postElements}

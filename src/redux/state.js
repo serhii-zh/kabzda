@@ -1,10 +1,10 @@
 const state = {
   profilePage: {
     posts: [
-      { text: "This is my first post", likesCount: 12 },
-      { text: "Second post for you", likesCount: 5 },
-      { text: "How about the third one?", likesCount: 52 },
-      { text: "Final 4th post", likesCount: 0 },
+      { id: 1, text: "Second post for you", likesCount: 5 },
+      { id: 2, text: "How about the third one?", likesCount: 52 },
+      { id: 3, text: "This is my first post", likesCount: 12 },
+      { id: 4, text: "Final 4th post", likesCount: 0 },
     ],
   },
   dialogsPage: {
@@ -51,6 +51,23 @@ const state = {
       { text: "Are you there?" },
     ],
   },
+};
+
+export const addPostEntry = (postText) => {
+  debugger;
+  const newPostEntry = {
+    id: 5,
+    text: postText,
+    likesCount: 0,
+  };
+  state.profilePage.posts.push(newPostEntry);
+};
+
+export const addMessageEntry = (messageText) => {
+  const newMessageEntry = {
+    text: messageText,
+  };
+  state.dialogsPage.messages.push(newMessageEntry);
 };
 
 export default state;
