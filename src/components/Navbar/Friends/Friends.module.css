@@ -1,0 +1,35 @@
+.friendsSection {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.friendsSection h3 {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+}
+
+.friendsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.friend {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.friend img {
+    width: 50px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+}
+
+.friendName {
+    color: white;
+}

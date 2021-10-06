@@ -1,0 +1,9 @@
+.item {
+    color: red;
+}
+
+.item div img {
+    width: 30px;
+    border-radius: 50px;
+    margin: 5px;
+}
